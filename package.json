@@ -1,5 +1,5 @@
 {
-  "name": "graphkit",
+  "name": "@billdaddy/graphkit",
   "version": "0.1.0",
   "description": "Zero-dependency TypeScript graph library: directed/undirected, weighted edges, DFS/BFS, Dijkstra, topological sort, cycle detection, SCC, MST. Modern replacement for abandoned graphlib.",
   "type": "module",

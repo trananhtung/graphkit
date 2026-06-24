@@ -2,14 +2,14 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
-[![npm](https://img.shields.io/npm/v/graphkit)](https://www.npmjs.com/package/graphkit)
+[![npm](https://img.shields.io/npm/v/%40billdaddy%2Fgraphkit)](https://www.npmjs.com/package/@billdaddy/graphkit)
 [![CI](https://github.com/trananhtung/graphkit/actions/workflows/ci.yml/badge.svg)](https://github.com/trananhtung/graphkit/actions)
 [![license](https://img.shields.io/npm/l/graphkit)](LICENSE)
 
 Zero-dependency TypeScript graph library — directed & undirected graphs, weighted edges, DFS/BFS, Dijkstra, topological sort, cycle detection, strongly connected components, and minimum spanning tree.
 
 ```bash
-npm install graphkit
+npm install @billdaddy/graphkit
 ```
 
 ## Why?
@@ -21,7 +21,7 @@ Inspired by Python's `networkx`, Go's `dominikbraun/graph`, Java's `JGraphT`, an
 ## Quick start
 
 ```ts
-import { Graph, digraph, ungraph } from "graphkit";
+import { Graph, digraph, ungraph } from "@billdaddy/graphkit";
 
 // Directed weighted graph
 const g = digraph<string, number>();
@@ -41,7 +41,7 @@ const result = g.dijkstra("a", "c");
 ### Creating a graph
 
 ```ts
-import { Graph, digraph, ungraph } from "graphkit";
+import { Graph, digraph, ungraph } from "@billdaddy/graphkit";
 
 const g = new Graph({ directed: true });  // directed (default)
 const d = digraph();                       // shorthand for directed
@@ -142,7 +142,7 @@ const g2 = Graph.fromJSON(json);
 ### Dependency graph with topological sort
 
 ```ts
-import { digraph } from "graphkit";
+import { digraph } from "@billdaddy/graphkit";
 
 const g = digraph();
 g.addEdge("lodash", "app");
@@ -156,7 +156,7 @@ const buildOrder = g.topologicalSort();
 ### Network routing with Dijkstra
 
 ```ts
-import { ungraph } from "graphkit";
+import { ungraph } from "@billdaddy/graphkit";
 
 const network = ungraph();
 network.addEdge("A", "B", { weight: 10 });
@@ -172,7 +172,7 @@ const { path, distance } = network.dijkstra("A", "D")!;
 ### Detecting circular imports
 
 ```ts
-import { digraph } from "graphkit";
+import { digraph } from "@billdaddy/graphkit";
 
 const deps = digraph();
 deps.addEdge("a", "b");
@@ -187,7 +187,7 @@ if (deps.hasCycle()) {
 ### Finding clusters (SCC)
 
 ```ts
-import { digraph } from "graphkit";
+import { digraph } from "@billdaddy/graphkit";
 
 const g = digraph();
 g.addEdge("user1", "user2"); g.addEdge("user2", "user1"); // mutual
